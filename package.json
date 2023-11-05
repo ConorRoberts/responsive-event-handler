@@ -1,14 +1,13 @@
 {
   "name": "@conorroberts/responsive-event-handler",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts",
-    "publish": "npm version patch && npm publish"
+    "build": "tsup src/index.ts"
   },
   "files": [
     "dist"
