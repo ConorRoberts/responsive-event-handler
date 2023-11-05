@@ -1,6 +1,9 @@
 {
   "name": "@conorroberts/responsive-event-handler",
-  "version": "1.0.7",
+  "version": "1.0.8",
+  "repository": {
+    "url": "https://github.com/ConorRoberts/responsive-event-handler"
+  },
   "description": "",
   "private": false,
   "main": "dist/index.js",
