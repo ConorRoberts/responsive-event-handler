@@ -3,7 +3,7 @@
 Uses `window.innerWidth` to determine which event handler to run, based on [TailwindCSS breakpoints](https://tailwindcss.com/docs/responsive-design).
 
 ```jsx
-import { responsiveEventHandler } from "responsive-event-handler";
+import { responsiveEventHandler } from "@conorroberts/responsive-event-handler";
 
 const ReactComponent = () => {
   return (
