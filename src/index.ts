@@ -1,6 +1,10 @@
 const breakpoints = ["sm", "md", "lg", "xl", "2xl"] as const;
 type Breakpoint = (typeof breakpoints)[number];
-type BreakpointHandlers<E> = Partial<Record<Breakpoint, (e: E) => any>>;
+type BreakpointHandlers<E> = Partial<
+  Record<Breakpoint, (e: E) => any> & {
+    default: (e: E) => any;
+  }
+>;
 const breakpointWidthValues: Record<Breakpoint, number> = {
   sm: 640,
   md: 768,
@@ -24,5 +28,7 @@ export const responsiveEventHandler =
       return options.md(event);
     } else if (options.sm && width >= breakpointWidthValues.sm) {
       return options.sm(event);
+    } else if (options.default) {
+      return options.default(event);
     }
   };

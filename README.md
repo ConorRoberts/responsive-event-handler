@@ -8,9 +8,9 @@ import { responsiveEventHandler } from "@conorroberts/responsive-event-handler";
 const ReactComponent = () => {
   return (
     <button onClick={responsiveEventHandler({
-      sm: () => console.log('sm'),
-      md: () => console.log('md'),
-      lg: () => console.log('lg'),
+      default: () => console.log("No other breakpoints match!"),
+      sm: () => console.log("sm"),
+      lg: () => console.log("lg"),
       // Type of event is inferred!
       xl: (event) => console.log(event.target),
     })}>
